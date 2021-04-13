@@ -1,0 +1,41 @@
+1618297408317	geckodriver	INFO	Listening on 127.0.0.1:55938
+1618297408861	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/z7/ns383txn18d81yhl_50vrclh0000gn/T/rust_mozprofilelMi9eO"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618297415174	Marionette	INFO	Listening on port 55951
+1618297415246	Marionette	WARN	TLS certificate errors will be ignored for this session
+1618297438896	Marionette	INFO	Stopped listening on port 55951
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1618297442561	geckodriver	INFO	Listening on 127.0.0.1:56097
+1618297442570	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/z7/ns383txn18d81yhl_50vrclh0000gn/T/rust_mozprofileSwvnKh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618297444945	Marionette	INFO	Listening on port 56109
+1618297445046	Marionette	WARN	TLS certificate errors will be ignored for this session
+1618297863430	geckodriver	INFO	Listening on 127.0.0.1:56218
+1618297863438	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/z7/ns383txn18d81yhl_50vrclh0000gn/T/rust_mozprofileiaSJux"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618297865766	Marionette	INFO	Listening on port 56227
+1618297865830	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1618297962730	geckodriver	INFO	Listening on 127.0.0.1:56310
+1618297963747	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/z7/ns383txn18d81yhl_50vrclh0000gn/T/rust_mozprofilen5ebGt"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618297966376	Marionette	INFO	Listening on port 56321
+1618297966432	Marionette	WARN	TLS certificate errors will be ignored for this session
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: controllerWindow is null
+Full stack: installController@resource://devtools/client/shared/undo.js:144:25
+get undo@resource://devtools/client/inspector/markup/markup.js:417:18
+get undo@resource://devtools/client/inspector/markup/views/markup-container.js:50:5
+showTextEditor/done/<@resource://devtools/client/inspector/markup/views/text-editor.js:99:11
+process@resource://gre/modules/Promise-backend.js:961:38
+walkerLoop@resource://gre/modules/Promise-backend.js:845:29
+Promise*scheduleWalkerLoop@resource://gre/modules/Promise-backend.js:775:19
+schedulePromise@resource://gre/modules/Promise-backend.js:809:12
+completePromise@resource://gre/modules/Promise-backend.js:741:12
+
+*************************
