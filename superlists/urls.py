@@ -17,5 +17,8 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url(r'^$', views.home_page, name='home'), ## so you see can see
+                                              ## the map to the
+                                              ## views.home_page in
+                                              ## the second entry.
 ]
