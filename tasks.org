@@ -1,7 +1,0 @@
-** TODO compare unittest to pytest
-  :PROPERTIES:
-  :WILD_NOTIFIER_NOTIFY_BEFORE: 30 10 5
-  :END:
-
-
-  write the structre for both

@@ -1,46 +1,39 @@
-from selenium import webdriver
 import unittest
+from selenium import webdriver
 
-class NewVisitorTest(unittest.TestCase):
 
-    def setUp(self):
-        self.browser = webdriver.Firefox()
+class NewVisitorTest(unittest.TestCase):  
 
-    def tearDown(self):
+    # setUp and tearDown are special methods which get run before and
+    # after each test. I’m using them to start and stop our browser.
+    def setUp(self):  
+        self.browser = webdriver.Firefox()  
+
+    def tearDown(self):  
         self.browser.quit()
 
-    def test_can_start_a_list_and_retrieve_it_later(self):
-        # Edith has heard about a cool new online to-do app. She goes
-        # to check out its homepage
-        self.browser.get('http://localhost:8000')
+
+    # Any method whose name starts with test_ is a test
+    # in the unittest package
+    def test_can_start_a_todo_list(self):  
+        # Edith has heard about a cool new online to-do app.
+        # She goes to check out its homepage
+        self.browser.get("http://localhost:8000")  
 
         # She notices the page title and header mention to-do lists
-        self.assertIn('To-Do', self.browser.title)
-        self.fail('Finish the test!')
+        self.assertIn("To-Do", self.browser.title)  
 
-        # She is invited to enter a to-do item straight away
+        # self.fail just fails no matter what, producing the error
+        # message given. I’m using it as a reminder to finish the
+        # test.
+        self.fail("Finish the test!")  
 
-        # She types "Buy peacock feathers" into a text box (Edith's hobby
-        # is tying fly-fishing lures)
-
-        # When she hits enter, the page updates, and now the page lists
-        # "1: Buy peacock feathers" as an item in a to-do list
-
-        # There is still a text box inviting her to add another item. She
-        # enters "Use peacock feathers to make a fly" (Edith is very methodical)
-
-        # The page updates again, and now shows both items on her list
-
-        # Edith wonders whether the site will remember her list. Then she sees
-        # that the site has generated a unique URL for her -- there is some
-        # explanatory text to that effect.
-
-        # She visits that URL - her to-do list is still there.
+        [...]
 
         # Satisfied, she goes back to sleep
 
-        browser.quit()
-
-
-if __name__ == '__main__':
-    unittest.main(warnings = 'ignore')
+# We call unittest.main(), which launches the unittest test runner,
+# which will automatically find test classes and methods in the file
+# and run them.
+if __name__ == "__main__":  
+    unittest.main()  
