@@ -1,3 +1,6 @@
+from django.urls import path
+from lists.views import home_page
+
 """
 URL configuration for superlists project.
 
@@ -18,5 +21,5 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("", home_page, name="home"), # you are routing here the path to the views.
 ]
