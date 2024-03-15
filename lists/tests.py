@@ -5,6 +5,16 @@ different projects.
 """
 from django.test import TestCase
 
-class SmokeTest(TestCase):
-    def test_bad_maths(self):
-        self.assertEqual(1 + 1, 3)
+# For testing Views - I.e. Controllers in the Model-View-Controller
+# Framework.
+from django.http import HttpRequest  
+from lists.views import home_page
+
+class HomePageTest(TestCase):
+    def test_home_page_returns_correct_html(self):
+        request = HttpRequest()  
+        response = home_page(request)  # pass the request view to the controller.
+        html = response.content.decode("utf8")  # extract content of the response
+        self.assertIn("<title>To-Do lists</title>", html)
+        self.assertTrue(html.startswith("<html>"))  
+        self.assertTrue(html.endswith("</html>"))  
