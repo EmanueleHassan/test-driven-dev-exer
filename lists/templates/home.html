@@ -1,3 +1,27 @@
 <html>
-  <title>To-Do lists</title>
+  <head>
+    <title>To-Do lists</title>
+  </head>
+  <body>
+    <h1>Your To-Do list</h1>
+
+
+    <!-- send post request from browser 
+    Because we haven’t specified an action= attribute in the form,
+    it is submitting back to the same URL it was rendered from
+    by default (i.e., /)
+    -->
+    <form method="POST">
+      <input name="item_text" method= "POST" id="id_new_item"  placeholder="Enter a to-do item"/>
+      {% csrf_token %}
+    </form>
+
+    <table id="id_list_table">
+      <!-- {{ new_item_text }}
+      It is how you pass python variables to the template
+      -->
+      <tr><td>1: {{ new_item_text }}</td></tr> 
+    </table>
+
+  </body>
 </html>
