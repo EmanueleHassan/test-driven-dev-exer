@@ -46,17 +46,15 @@ class NewVisitorTest(unittest.TestCase):
         
         table = self.browser.find_element(By.ID, "id_list_table")
         rows = table.find_elements(By.TAG_NAME, "tr")  
-        self.assertTrue(any(row.text == "1: Buy peacock feathers" for row in rows))
+
+        self.assertIn("1: Buy peacock feathers", [row.text for row in rows])
+
+        self.assertIn(
+            "2: Use peacock feathers to make a fly",
+            [row.text for row in rows],
+        )
+
         
-        # self.fail just fails no matter what, producing the error
-        # message given. I’m using it as a reminder to finish the
-        # test.
-        self.fail("Finish the test!")  
-
-        [...]
-
-        # Satisfied, she goes back to sleep
-
 # We call unittest.main(), which launches the unittest test runner,
 # which will automatically find test classes and methods in the file
 # and run them.
